@@ -119,7 +119,7 @@ with open('participants.csv', 'rU') as csvfile:
 
 		participants.append([last,first,affiliation])
 
-participants.sort(key = lambda p: p[0]+p[1])
+participants.sort(key = lambda p: (p[0]+p[1]).lower())
 
 for p in itertools.groupby(participants):
 	last,first,affiliation = p[0]
