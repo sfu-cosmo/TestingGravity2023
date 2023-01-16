@@ -1,0 +1,138 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+% use the corresponding paper size for your ticket definition
+\documentclass[letterpaper,12pt]{article}
+
+%%% Load fonts and graphics
+\usepackage{mathspec} % loads fontspec as well
+\usepackage{xcolor,xifthen,xltxtra,xunicode,graphicx,amstext}
+\definecolor{RegentGrey}{HTML}{83939D}
+\usepackage[pdfauthor={Testing Gravity 2023},pdftitle={Rapid Talks and Posters},colorlinks,urlcolor={RegentGrey}]{hyperref}
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
+
+%%% Set paper size and margins
+\usepackage[letterpaper]{anysize}       % Set paper size and margins
+\marginsize{0.5in}{0.5in}{0.5in}{0.5in}
+\setlength{\headheight}{32pt}
+\setlength{\headsep}{12pt}
+\flushbottom
+
+%%% Customize layout
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{fancy}
+\lhead{\fontspec{Cinzel}\huge Testing Gravity 2023}\chead{}
+\rhead{\fontspec{Lato Light Italic}\Large Rapid Talks and Posters}
+\lfoot{}\cfoot{}\rfoot{}
+%\renewcommand{\headrulewidth}{1pt}
+%\renewcommand{\footrulewidth}{1pt}
+
+
+\setmathsfont(Digits,Latin,Greek)[Scale=MatchLowercase]{Lato Light}
+\setmainfont[BoldFont={Lato},BoldItalicFont={Lato Italic}]{Lato Light}
+\setsansfont{Lato}
+\setmonofont{Jura}
+
+\newcommand{\slot}[1]{\item[\fontspec{Lato} #1]}
+\newcommand{\talk}[2]{{\fontspec{Lato Bold} #1,} {\fontspec{Lato Italic} #2}}
+
+
+\begin{document}
+
+\section*{Rapid Talks Session \#1}
+\begin{enumerate}
+\setlength\itemsep{0pt}
+%\setlength\itemindent{36pt}
+
+\item \talk{David Benisty (Leiden University)}{General theory of relativity needs at least one modification - the cosmological constant}
+
+\item \talk{Maxence Corman (Perimeter Institute)}{Evolution of binary black holes in Einstein scalar Gauss-Bonnet gravity}
+
+\item \talk{Guillaume Dideron (University of Waterloo)}{SCoRe: A new framework to study unmodelled physics from gravitational wave data}
+
+\item \talk{Kurt Koltko (Independent)}{Gauge CPT, experimental tests, and the Tully-Fisher law}
+
+\item \talk{Marcelo Salgado (Instituto de Ciencias Nucleares, UNAM)}{Boson clouds around Kerr black holes and rotating hairy black holes in GR}
+
+\item \talk{Ashim Sen Gupta (Queen Mary University of London)}{Non-linear Horndeski analysis with Hi-COL}
+
+\item \talk{Alex Woodfinden (University of Waterloo)}{Geometry and growth measurements from void-galaxy and galaxy-galaxy clustering}
+
+\item \talk{Jonathan Barenboim (Simon Fraser University)}{Evaporating black holes in 2D models of gravity}
+
+\item \talk{Kate Taylor (University of Victoria)}{Constraining black hole ringdowns with LVK observations}
+
+\item \talk{Jann Zosso (ETHZ / UIUC)}{Null memory beyond Einstein gravity}	
+
+\item \talk{Ryley Hill (University of British Columbia)}{Galaxy protoclusters beyond redshift 4}
+
+\end{enumerate}
+
+\section*{Rapid Talks Session \#2}
+\begin{enumerate}
+\setlength\itemsep{0pt}
+%\setlength\itemindent{36pt}
+
+\item \talk{Ramiro Cayuso (Perimeter Institute)}{Numerical simulations in effective field theory extensions to GR}
+
+\item \talk{Santanu Das (Imperial College London)}{Mach principle, gravity, dark matter, and dark energy}
+
+\item \talk{Gregory Kaplanek (Imperial College London)}{Minimal decoherence in single-field inflation}
+
+\item \talk{Joshua MacEachern (University of British Columbia)}{The Canadian galactic emission mapper (CGEM): An 8-10GHz Northern sky polarization survey to aid in the B-mode search}
+
+\item \talk{Masroor Pookkillath (CTPNP, Mahidol University, Thailand)}{Extended minimal theories of massive gravity}
+
+\item \talk{Jan Schuette-Engel (University of Illinois at Urbana-Champaign)}{Freezing-in gravitational waves}
+
+\item \talk{Zach Weiner (University of Washington)}{New physics with low-frequency gravitational waves: neutrino interactions, axions, and early dark energy}
+
+\item \talk{Luna Zagorac (Perimeter Institute)}{Ultralight dark matter dynamics in the language of eigenstates}
+
+\item \talk{Yuri V. Gusev (Simon Fraser University)}{An axiomatic approach to the unified field action}
+
+\item \talk{Alessandra Silvestri (Leiden University)}{What we learned from a cosmological reconstruction of gravity I}
+
+\item \talk{Levon Pogosian (Simon Fraser University)}{What we learned from a cosmological reconstruction of gravity II}
+
+\item \talk{Zhuangfei Wang (Simon Fraser University)}{New MGCAMB}
+
+\end{enumerate}
+
+
+\section*{Posters}
+\begin{enumerate}
+\setlength\itemsep{0pt}
+%\setlength\itemindent{36pt}
+
+\item \talk{Conner Gettings (UW)}{Torsion balance tests of gravity}
+
+\item \talk{Raelyn Sullivan (UBC)}{Measuring birefringence in real space}
+
+\item \talk{Ryley Hill (UBC)}{Galaxy protoclusters beyond redshift 4}
+
+\item \talk{Tom Andersen (NSCIR)}{Bohmian trajectory gravity - a better semiclassical gravity}
+
+\item \talk{Kurt Koltko}{Gauge CPT, experimental tests, and the Tully-Fisher law}
+
+\item \talk{Asuka Ito}{Exploring high frequency gravitational waves with magnons}
+
+\item \talk{Guillaume Dideron}{SCoRe: A new framework to study unmodeled physics from gravitational wave data}
+
+\item \talk{Ann Nakato}{Anisotropic warm inflation}
+
+\item \talk{Jordan Krywonos}{Testing the robustness of statistical inference for cosmological parameter measurements}
+
+\item \talk{Kiana Salehi}{Shadow implications: What does measuring the photon ring imply for gravity}
+
+\item \talk{Sotirios Mygdalas}{Lorentzian quasicrystals and the irrationality of spacetime}
+
+\item \talk{Matthew Elley}{Dynamical scalarization and descalarization in binary black hole mergers}
+
+\item \talk{Tomoya Tachinami}{Non-relativistic stellar structure in generic higher-curvature gravity}
+
+\item \talk{Conner Dailey}{Reflecting boundary conditions in numerical relativity as a model for black hole}
+
+\end{enumerate}
+\end{document}
