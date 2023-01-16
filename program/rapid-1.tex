@@ -1,0 +1,69 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+% use the corresponding paper size for your ticket definition
+\documentclass[letterpaper,12pt]{article}
+
+%%% Load fonts and graphics
+\usepackage{mathspec} % loads fontspec as well
+\usepackage{xcolor,xifthen,xltxtra,xunicode,graphicx,amstext}
+\definecolor{RegentGrey}{HTML}{83939D}
+\usepackage[pdfauthor={Testing Gravity 2023},pdftitle={Rapid Talks},colorlinks,urlcolor={RegentGrey}]{hyperref}
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
+
+%%% Set paper size and margins
+\usepackage[letterpaper]{anysize}       % Set paper size and margins
+\marginsize{0.5in}{0.5in}{0.5in}{0.5in}
+\setlength{\headheight}{32pt}
+\setlength{\headsep}{12pt}
+\flushbottom
+
+%%% Customize layout
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{fancy}
+\lhead{\fontspec{Cinzel}\huge Testing Gravity 2023}\chead{}
+\rhead{\fontspec{Lato Light Italic}\Large Rapid Talks Session \#1}
+\lfoot{}\cfoot{}\rfoot{}
+%\renewcommand{\headrulewidth}{1pt}
+%\renewcommand{\footrulewidth}{1pt}
+
+
+\setmathsfont(Digits,Latin,Greek)[Scale=MatchLowercase]{Lato Light}
+\setmainfont[BoldFont={Lato},BoldItalicFont={Lato Italic}]{Lato Light}
+\setsansfont{Lato}
+\setmonofont{Jura}
+
+\newcommand{\slot}[1]{\item[\fontspec{Lato} #1]}
+\newcommand{\talk}[2]{{\fontspec{Lato Bold} #1,} {\fontspec{Lato Italic} #2}}
+
+
+\begin{document}
+\begin{enumerate}
+\setlength\itemsep{0pt}
+%\setlength\itemindent{36pt}
+
+\item \talk{David Benisty (Leiden University)}{General Theory of Relativity needs at least one modification - the Cosmological Constant}
+
+\item \talk{Maxence Corman (Perimeter Institute)}{Evolution of binary black holes in Einstein scalar Gauss Bonnet gravity}
+
+\item \talk{Guillaume Dideron (University of Waterloo)}{SCoRe: A New Framework to Study Unmodeled Physics from Gravitational Wave Data}
+
+\item \talk{Kurt Koltko (Independent)}{Gauge CPT, Experimental Tests, and the Tully-Fisher Law}
+
+\item \talk{Marcelo Salgado (Instituto de Ciencias Nucleares, UNAM)}{Boson clouds around Kerr black holes and rotating hairy black holes in GR}
+
+\item \talk{Ashim Sen Gupta (Queen Mary University of London)}{Non-linear Horndeski analysis with Hi-COL}
+
+\item \talk{Alex Woodfinden (University of Waterloo)}{Geometry and growth measurements from void-galaxy and galaxy-galaxy clustering}
+
+\item \talk{Jonathan Barenboim (Simon Fraser University)}{Evaporating black holes in 2D models of gravity}
+
+\item \talk{Kate Taylor (University of Victoria)}{Constraining black hole ringdowns with LVK observations}
+
+\item \talk{Jann Zosso (ETHZ / UIUC)}{Null Memory Beyond Einstein Gravity}	
+
+\item \talk{Ryley Hill (University of British Columbia)}{Galaxy Protoclusters beyond redshift 4}
+
+\end{enumerate}
+\end{document}
