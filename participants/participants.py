@@ -35,14 +35,15 @@ participants = [
     ["Tolley", "Andrew", "Imperial"],
     #["Trodden", "Mark", "UPenn"],
     #["Vachaspati", "Tanmay", "ASU"],
-    ["Weinfurtner", "Silke", "Nottingham"],
+    #["Weinfurtner", "Silke", "Nottingham"],
   	# LOC
   	["Frolov", "Andrei", "Simon Fraser University"],
   	["Pogosian", "Levon", "Simon Fraser University"],
 ]
 
 soc = ["Frolov", "Fujiwara", "Pogosian", "Psaltis", "Scott", "Silvestri"]
-loc = ["Pogosian"]
+loc = ["Mirpoorian", "Quispe Pena", "Wang", "Nezhadsafavi", "Sullivan", "Abghari", "Hill", "Emond", "Gusev", "Hughes", "Zucca"]
+exclude = ["Bryan", "Yunting"]
 
 table = []
 
@@ -116,6 +117,8 @@ with open('participants.csv', 'rU') as csvfile:
 		if last == "Afshordi": affiliation = "Perimeter/Waterloo"
 		if last == "Nakato": affiliation = "Kobe University"
 		if last == "Sedrakian": affiliation = "Frankfurt Institute for Advnaced Studies"
+		if last == "Weinfurtner": affiliation = "University of Nottingham"
+		if last == "Mirpoorian": first = "Hamid"
 
 		participants.append([last,first,affiliation])
 
@@ -130,13 +133,13 @@ for p in itertools.groupby(participants):
 	
 	# special roles...
 	role = ""
-	if last in soc: role = "[soc]"
-	if last in loc: role = "[volunteer]"
+	if last in soc and not first in exclude: role = "[soc]"
+	if last in loc and not first in exclude: role = "[volunteer]"
 	
 	# formatted output
 	if output == 'html': table.append("%s %s (%s)" % (first, last, mangle(affiliation)))
 	if output == 'tags': table.append("\\nametag%s{%s %s}{%s}" % (role, first, last, mangle(affiliation)))
-	if output == 'list': table.append("\\nametag%s{%s %s}{%s}" % (role, first, last, affiliation))
+	if output == 'list': table.append("\\nametag%s{%s %s}{%s}" % (role, first, last, mangle(affiliation)))
 
 if output == 'html':
 	print("""<meta charset="UTF-8">
