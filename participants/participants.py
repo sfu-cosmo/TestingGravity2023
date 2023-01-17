@@ -49,6 +49,7 @@ table = []
 
 def mangle(affiliation):
 	affiliation = re.sub(r"^(The\s+)", '', affiliation)
+	affiliation = re.sub(r"Queen Mary University of London", 'Queen Mary London', affiliation)
 	affiliation = re.sub(r"Royal Astronomical Society", 'RASC', affiliation)
 	affiliation = re.sub(r"University of British Columbia", 'UBC', affiliation)
 	affiliation = re.sub(r"Simon Fraser (U|u)niversity", 'SFU', affiliation)
@@ -118,6 +119,8 @@ with open('participants.csv', 'rU') as csvfile:
 		if last == "Nakato": affiliation = "Kobe University"
 		if last == "Sedrakian": affiliation = "Frankfurt Institute for Advnaced Studies"
 		if last == "Weinfurtner": affiliation = "University of Nottingham"
+		if last == "MacEachern": affiliation = "University of British Columbia"
+		if last == "Yazdi": affiliation = "Independent Researcher"
 		if last == "Mirpoorian": first = "Hamid"
 
 		participants.append([last,first,affiliation])
